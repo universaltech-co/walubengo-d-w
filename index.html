@@ -7,514 +7,681 @@
 <meta name="description" content="Walubengo Wangila D. - Software Engineer and IT Professional. Explore my portfolio, projects, skills and professional credentials.">
 <title>Walubengo Wangila | Software Engineer</title>
 
-<style>
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+<style>
 :root {
-  --bg:#090c19;
-  --panel:#141a30;
-  --text:#f4f5ff;
-  --muted:#a1a9c2;
-  --cyan:#70e5ef;
-  --purple:#a78bfa;
-  --line:rgba(255,255,255,.12);
+    --bg: #090c19;
+    --panel: #141a30;
+    --text: #f4f5ff;
+    --muted: #a1a9c2;
+    --cyan: #70e5ef;
+    --purple: #a78bfa;
+    --line: rgba(255,255,255,.12);
 }
 
-* { box-sizing:border-box; margin:0; padding:0; }
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-html { scroll-behavior:smooth; }
+html {
+    scroll-behavior: smooth;
+}
 
 body {
-  background:var(--bg);
-  color:var(--text);
-  font-family:'DM Sans',sans-serif;
-  line-height:1.7;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    line-height: 1.7;
 }
 
-a { text-decoration:none; color:inherit; }
+a {
+    text-decoration: none;
+    color: inherit;
+}
 
 .container {
-  width:min(1120px,92%);
-  margin:auto;
+    width: min(1120px, 92%);
+    margin: auto;
 }
 
+/* HEADER */
+
 header {
-  position:sticky;
-  top:0;
-  z-index:100;
-  background:rgba(9,12,25,.94);
-  backdrop-filter:blur(15px);
-  border-bottom:1px solid var(--line);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(9,12,25,.94);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid var(--line);
 }
 
 .navbar {
-  min-height:75px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
+    min-height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .logo {
-  font:700 21px 'Space Grotesk';
-  letter-spacing:2px;
+    font: 700 21px 'Space Grotesk';
+    letter-spacing: 2px;
 }
 
-.logo span { color:var(--cyan); }
+.logo span {
+    color: var(--cyan);
+}
 
 nav {
-  display:flex;
-  align-items:center;
-  gap:25px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
 }
 
 nav a {
-  font-size:13px;
-  color:var(--muted);
-  transition:.3s;
+    font-size: 13px;
+    color: var(--muted);
+    transition: .3s;
 }
 
-nav a:hover { color:var(--cyan); }
+nav a:hover {
+    color: var(--cyan);
+}
 
 .menu-btn {
-  display:none;
-  background:none;
-  border:0;
-  color:white;
-  font-size:25px;
-  cursor:pointer;
+    display: none;
+    background: none;
+    border: 0;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
 }
 
+/* HERO */
+
 .hero {
-  min-height:660px;
-  display:grid;
-  grid-template-columns:1.1fr .9fr;
-  align-items:center;
-  gap:45px;
-  padding:75px 0;
+    min-height: 660px;
+    display: grid;
+    grid-template-columns: 1.1fr .9fr;
+    align-items: center;
+    gap: 45px;
+    padding: 75px 0;
 }
 
 .available {
-  display:inline-block;
-  border:1px solid var(--line);
-  padding:7px 14px;
-  border-radius:30px;
-  color:#9ae6b4;
-  font-size:11px;
-  letter-spacing:1px;
-  margin-bottom:25px;
+    display: inline-block;
+    border: 1px solid var(--line);
+    padding: 7px 14px;
+    border-radius: 30px;
+    color: #9ae6b4;
+    font-size: 11px;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
 }
 
 .hero h1 {
-  font:700 clamp(48px,7vw,83px)/1.05 'Space Grotesk';
-  letter-spacing:-4px;
-  margin-bottom:15px;
+    font: 700 clamp(48px,7vw,83px)/1.05 'Space Grotesk';
+    letter-spacing: -4px;
+    margin-bottom: 15px;
 }
 
 .gradient {
-  background:linear-gradient(100deg,var(--cyan),var(--purple),#f0abfc);
-  background-clip:text;
-  -webkit-background-clip:text;
-  color:transparent;
+    background: linear-gradient(100deg,var(--cyan),var(--purple),#f0abfc);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
 }
 
 .hero h2 {
-  font:500 19px 'Space Grotesk';
-  margin-bottom:20px;
+    font: 500 19px 'Space Grotesk';
+    margin-bottom: 20px;
 }
 
 .hero p {
-  color:var(--muted);
-  max-width:560px;
-  font-size:15px;
+    color: var(--muted);
+    max-width: 560px;
+    font-size: 15px;
 }
 
 .buttons {
-  display:flex;
-  flex-wrap:wrap;
-  gap:13px;
-  margin-top:28px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 13px;
+    margin-top: 28px;
 }
 
 .btn {
-  display:inline-block;
-  padding:12px 20px;
-  border-radius:8px;
-  font-size:13px;
-  font-weight:700;
-  border:1px solid var(--line);
-  cursor:pointer;
-  transition:.3s;
+    display: inline-block;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 700;
+    border: 1px solid var(--line);
+    cursor: pointer;
+    transition: .3s;
 }
 
-.btn:hover { transform:translateY(-3px); }
+.btn:hover {
+    transform: translateY(-3px);
+}
 
 .primary {
-  color:#09111c;
-  background:linear-gradient(100deg,var(--cyan),#b8a6ff);
-  border:0;
+    color: #09111c;
+    background: linear-gradient(100deg,var(--cyan),#b8a6ff);
+    border: 0;
 }
 
-.secondary { background:var(--panel); }
+.secondary {
+    background: var(--panel);
+}
+
+.ribara-btn {
+    background: var(--cyan);
+    color: #090c19;
+    border: 0;
+}
+
+.ribara-btn:hover {
+    background: var(--purple);
+    color: white;
+}
+
+/* HERO PROFILE */
 
 .profile {
-  width:100%;
-  max-width:390px;
-  margin:auto;
-  text-align:center;
-  padding:17px;
-  background:linear-gradient(145deg,#202a4a,#13182d);
-  border:1px solid var(--line);
-  border-radius:22px;
-  box-shadow:0 25px 80px rgba(0,0,0,.4);
-  transform:rotate(2deg);
+    width: 100%;
+    max-width: 390px;
+    margin: auto;
+    text-align: center;
+    padding: 17px;
+    background: linear-gradient(145deg,#202a4a,#13182d);
+    border: 1px solid var(--line);
+    border-radius: 15px;
+    box-shadow: 0 25px 80px rgba(0,0,0,.4);
+    transform: rotate(2deg);
 }
 
 .profile img {
-  width:100%;
-  height:390px;
-  object-fit:cover;
-  border-radius:15px;
-  display:block;
-  background:#202944;
+    width: 100%;
+    height: 390px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+    background: #202944;
 }
 
 .profile h3 {
-  font:600 22px 'Space Grotesk';
-  margin-top:15px;
+    font: 600 22px 'Space Grotesk';
+    margin-top: 15px;
 }
 
 .profile p {
-  font-size:11px;
-  color:var(--cyan);
-  letter-spacing:2px;
-  margin-top:4px;
+    font-size: 11px;
+    color: var(--cyan);
+    letter-spacing: 2px;
+    margin-top: 4px;
 }
 
-section { padding:90px 0; }
+/* HERO CONTACT QR */
 
-.section-title { margin-bottom:40px; }
+.hero-contact {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-top: 30px;
+    padding: 15px;
+    max-width: 410px;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+}
+
+.qr-code {
+    background: white;
+    padding: 8px;
+    border-radius: 5px;
+    flex-shrink: 0;
+}
+
+.qr-code img {
+    width: 105px;
+    height: 105px;
+    display: block;
+}
+
+.qr-info h4 {
+    font: 600 15px 'Space Grotesk';
+    margin-bottom: 5px;
+}
+
+.qr-info p {
+    font-size: 11px;
+    color: var(--muted);
+    margin-bottom: 8px;
+}
+
+.qr-info a {
+    display: inline-block;
+    color: var(--cyan);
+    font-size: 12px;
+    margin: 3px 9px 3px 0;
+}
+
+.qr-info a:hover {
+    text-decoration: underline;
+}
+
+/* GENERAL SECTIONS */
+
+section {
+    padding: 90px 0;
+}
+
+.section-title {
+    margin-bottom: 40px;
+}
 
 .section-title small {
-  color:var(--cyan);
-  letter-spacing:2px;
-  font-size:11px;
+    color: var(--cyan);
+    letter-spacing: 2px;
+    font-size: 11px;
 }
 
 .section-title h2 {
-  font:600 clamp(32px,5vw,48px) 'Space Grotesk';
-  margin-top:10px;
+    font: 600 clamp(32px,5vw,48px) 'Space Grotesk';
+    margin-top: 10px;
 }
 
 .section-title p {
-  color:var(--muted);
-  max-width:600px;
-  margin-top:12px;
-  font-size:14px;
+    color: var(--muted);
+    max-width: 600px;
+    margin-top: 12px;
+    font-size: 14px;
 }
 
+/* ABOUT */
+
 .about-grid {
-  display:grid;
-  grid-template-columns:1fr 1.3fr;
-  gap:45px;
-  align-items:center;
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 45px;
+    align-items: center;
 }
 
 .about-photo img {
-  width:100%;
-  height:350px;
-  object-fit:cover;
-  border-radius:15px;
-  border:1px solid var(--line);
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 1px solid var(--line);
 }
 
 .about-text p {
-  color:var(--muted);
-  font-size:14px;
-  margin-bottom:15px;
+    color: var(--muted);
+    font-size: 14px;
+    margin-bottom: 15px;
 }
 
 .facts {
-  display:flex;
-  gap:35px;
-  flex-wrap:wrap;
-  margin-top:25px;
+    display: flex;
+    gap: 35px;
+    flex-wrap: wrap;
+    margin-top: 25px;
 }
 
 .facts strong {
-  display:block;
-  font:600 23px 'Space Grotesk';
-  color:var(--cyan);
+    display: block;
+    font: 600 23px 'Space Grotesk';
+    color: var(--cyan);
 }
 
-.facts small { color:var(--muted); }
+.facts small {
+    color: var(--muted);
+}
+
+/* SKILLS */
 
 .skills-grid {
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:17px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 17px;
 }
 
 .skill {
-  background:var(--panel);
-  border:1px solid var(--line);
-  border-radius:13px;
-  padding:25px;
-  transition:.3s;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 25px;
+    transition: .3s;
 }
 
 .skill:hover {
-  transform:translateY(-5px);
-  border-color:var(--cyan);
+    transform: translateY(-5px);
+    border-color: var(--cyan);
 }
 
 .skill h3 {
-  font:600 18px 'Space Grotesk';
-  margin-bottom:10px;
+    font: 600 18px 'Space Grotesk';
+    margin-bottom: 10px;
 }
 
 .skill p {
-  color:var(--muted);
-  font-size:13px;
+    color: var(--muted);
+    font-size: 13px;
 }
 
 .tags {
-  display:flex;
-  flex-wrap:wrap;
-  gap:7px;
-  margin-top:16px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-top: 16px;
 }
 
 .tags span {
-  font-size:10px;
-  padding:5px 10px;
-  border:1px solid var(--line);
-  border-radius:20px;
-  color:var(--cyan);
+    font-size: 10px;
+    padding: 5px 10px;
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    color: var(--cyan);
 }
 
+/* PROJECTS */
+
 .projects-grid {
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:20px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
 }
 
 .project {
-  background:var(--panel);
-  border:1px solid var(--line);
-  border-radius:15px;
-  overflow:hidden;
-  transition:.3s;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: .3s;
 }
 
 .project:hover {
-  transform:translateY(-5px);
-  border-color:var(--purple);
+    transform: translateY(-5px);
+    border-color: var(--purple);
 }
 
 .project-image {
-  height:180px;
-  display:grid;
-  place-items:center;
-  background:linear-gradient(135deg,#263c65,#292047);
-  font:700 35px 'Space Grotesk';
-  color:var(--cyan);
+    height: 180px;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(135deg,#263c65,#292047);
+    font: 700 35px 'Space Grotesk';
+    color: var(--cyan);
 }
 
-.project-content { padding:24px; }
+.project-content {
+    padding: 24px;
+}
 
 .project-content h3 {
-  font:600 19px 'Space Grotesk';
-  margin-bottom:10px;
+    font: 600 19px 'Space Grotesk';
+    margin-bottom: 10px;
 }
 
 .project-content p {
-  color:var(--muted);
-  font-size:13px;
+    color: var(--muted);
+    font-size: 13px;
 }
 
-.project details { margin-top:18px; }
+.project details {
+    margin-top: 18px;
+}
 
 .project summary {
-  color:var(--cyan);
-  font-size:12px;
-  cursor:pointer;
-  font-weight:600;
+    color: var(--cyan);
+    font-size: 12px;
+    cursor: pointer;
+    font-weight: 600;
 }
 
-.project details p { margin-top:12px; }
+.project details p {
+    margin-top: 12px;
+}
 
 .project details ul {
-  margin:10px 0 0 18px;
-  color:var(--muted);
-  font-size:12px;
+    margin: 10px 0 0 18px;
+    color: var(--muted);
+    font-size: 12px;
 }
 
+/* DOCUMENTS */
+
 .documents-grid {
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
 }
 
 .document {
-  background:var(--panel);
-  border:1px solid var(--line);
-  padding:25px;
-  border-radius:15px;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    padding: 25px;
+    border-radius: 12px;
 }
 
 .document h3 {
-  font:600 20px 'Space Grotesk';
-  margin-bottom:10px;
+    font: 600 20px 'Space Grotesk';
+    margin-bottom: 10px;
 }
 
 .document p {
-  font-size:13px;
-  color:var(--muted);
-  margin-bottom:17px;
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 17px;
 }
 
 .certificate {
-  padding:15px 0;
-  border-top:1px solid var(--line);
+    padding: 15px 0;
+    border-top: 1px solid var(--line);
 }
 
 .certificate strong {
-  display:block;
-  font-size:13px;
+    display: block;
+    font-size: 13px;
 }
 
 .certificate small {
-  display:block;
-  color:var(--muted);
-  font-size:11px;
-  margin:4px 0 10px;
+    display: block;
+    color: var(--muted);
+    font-size: 11px;
+    margin: 4px 0 10px;
 }
 
 .certificate a {
-  color:var(--cyan);
-  font-size:12px;
-  margin-right:15px;
+    color: var(--cyan);
+    font-size: 12px;
+    margin-right: 15px;
 }
 
+/* SERVICES */
+
 .services {
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:15px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 15px;
 }
 
 .service {
-  padding:23px;
-  border-bottom:1px solid var(--line);
+    padding: 23px;
+    border-bottom: 1px solid var(--line);
 }
 
 .service h3 {
-  font:600 17px 'Space Grotesk';
-  margin-bottom:7px;
+    font: 600 17px 'Space Grotesk';
+    margin-bottom: 7px;
 }
 
 .service p {
-  font-size:13px;
-  color:var(--muted);
+    font-size: 13px;
+    color: var(--muted);
 }
 
+/* CONTACT */
+
 .contact-box {
-  background:linear-gradient(135deg,#202b4d,#19152f);
-  border:1px solid var(--line);
-  border-radius:20px;
-  padding:45px;
-  text-align:center;
+    background: linear-gradient(135deg,#202b4d,#19152f);
+    border: 1px solid var(--line);
+    border-radius: 15px;
+    padding: 45px;
+    text-align: center;
 }
 
 .contact-box h2 {
-  font:600 clamp(30px,5vw,45px) 'Space Grotesk';
+    font: 600 clamp(30px,5vw,45px) 'Space Grotesk';
 }
 
 .contact-box > p {
-  color:var(--muted);
-  font-size:14px;
-  margin:12px auto 25px;
-  max-width:550px;
+    color: var(--muted);
+    font-size: 14px;
+    margin: 12px auto 25px;
+    max-width: 550px;
 }
 
 .contact-form {
-  max-width:600px;
-  margin:25px auto 0;
-  text-align:left;
+    max-width: 600px;
+    margin: 25px auto 0;
+    text-align: left;
 }
 
 .contact-form label {
-  display:block;
-  font-size:12px;
-  margin:14px 0 6px;
+    display: block;
+    font-size: 12px;
+    margin: 14px 0 6px;
 }
 
 .contact-form input,
 .contact-form textarea {
-  width:100%;
-  background:#0d1225;
-  color:white;
-  border:1px solid var(--line);
-  border-radius:8px;
-  padding:13px;
-  font:13px 'DM Sans';
+    width: 100%;
+    background: #0d1225;
+    color: white;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 13px;
+    font: 13px 'DM Sans';
 }
 
 .contact-form textarea {
-  min-height:130px;
-  resize:vertical;
+    min-height: 130px;
+    resize: vertical;
 }
 
 .contact-form button {
-  margin-top:18px;
+    margin-top: 18px;
 }
 
 .contact-links {
-  display:flex;
-  justify-content:center;
-  gap:22px;
-  flex-wrap:wrap;
-  margin-top:30px;
-  font-size:12px;
+    display: flex;
+    justify-content: center;
+    gap: 22px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    font-size: 12px;
 }
 
-.contact-links a { color:var(--cyan); }
+.contact-links a {
+    color: var(--cyan);
+}
+
+.contact-links a:hover {
+    text-decoration: underline;
+}
+
+/* FOOTER */
 
 footer {
-  text-align:center;
-  padding:30px 10px;
-  border-top:1px solid var(--line);
-  color:var(--muted);
-  font-size:11px;
-  margin-top:70px;
+    text-align: center;
+    padding: 30px 10px;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 11px;
+    margin-top: 70px;
 }
 
+/* RESPONSIVE */
+
 @media(max-width:800px) {
-  .hero { grid-template-columns:1fr; }
-  .profile { max-width:330px; }
-  .about-grid { grid-template-columns:1fr; }
-  .about-photo { max-width:350px; }
-  .skills-grid { grid-template-columns:repeat(2,1fr); }
-  .documents-grid { grid-template-columns:1fr; }
+    .hero {
+        grid-template-columns: 1fr;
+    }
+
+    .profile {
+        max-width: 330px;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-photo {
+        max-width: 350px;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .documents-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media(max-width:600px) {
-  .menu-btn { display:block; }
-  nav {
-    display:none;
-    position:absolute;
-    top:75px;
-    left:0;
-    width:100%;
-    padding:20px;
-    background:#11172c;
-    flex-direction:column;
-  }
-  nav.open { display:flex; }
-  .hero h1 { font-size:55px; }
-  .skills-grid,
-  .projects-grid,
-  .services { grid-template-columns:1fr; }
-  .contact-box { padding:30px 17px; }
+    .menu-btn {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 75px;
+        left: 0;
+        width: 100%;
+        padding: 20px;
+        background: #11172c;
+        flex-direction: column;
+    }
+
+    nav.open {
+        display: flex;
+    }
+
+    .hero h1 {
+        font-size: 55px;
+    }
+
+    .skills-grid,
+    .projects-grid,
+    .services {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-box {
+        padding: 30px 17px;
+    }
+
+    .hero-contact {
+        max-width: 100%;
+        justify-content: flex-start;
+    }
+
+    .qr-code img {
+        width: 90px;
+        height: 90px;
+    }
+
+    .contact-links {
+        gap: 15px;
+    }
 }
 </style>
 </head>
@@ -522,471 +689,678 @@ footer {
 <body>
 
 <header>
-  <div class="container navbar">
-    <a href="#home" class="logo">WANGILA<span>.</span></a>
+    <div class="container navbar">
+        <a href="#home" class="logo">WANGILA<span>.</span></a>
 
-    <button class="menu-btn" id="menuBtn" aria-label="Toggle navigation">☰</button>
+        <button class="menu-btn" id="menuBtn" aria-label="Toggle navigation">☰</button>
 
-    <nav id="navigation">
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#documents">Credentials</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </div>
+        <nav id="navigation">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#documents">Credentials</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </div>
 </header>
 
 <main>
 
 <!-- HERO SECTION -->
+
 <section class="container hero" id="home">
 
-  <div>
-    <div class="available">● OPEN TO CAREER OPPORTUNITIES</div>
+    <div>
+        <div class="available">● OPEN TO CAREER OPPORTUNITIES</div>
 
-    <h1>
-      Walubengo<br>
-      <span class="gradient">Wangila.</span>
-    </h1>
+        <h1>
+            Walubengo<br>
+            <span class="gradient">Wangila.</span>
+        </h1>
 
-    <h2>Software Engineer | IT Professional</h2>
+        <h2>Software Engineer | IT Professional</h2>
 
-    <p>
-      I build practical digital solutions that solve real-world problems.
-      My interests include software development, web technologies,
-      business management systems, networking and emerging technologies.
-    </p>
+        <p>
+            I build practical digital solutions that solve real-world problems.
+            My interests include software development, web technologies,
+            business management systems, networking and emerging technologies.
+        </p>
 
-    <div class="buttons">
-      <a href="#projects" class="btn primary">Explore My Work ↗</a>
-      <a href="#contact" class="btn secondary">Contact Me</a>
-      <a href="assets/cv.pdf" class="btn secondary" target="_blank">View My CV</a>
+        <div class="buttons">
+            <a href="#projects" class="btn primary">Explore My Work ↗</a>
+
+            <a href="#contact" class="btn secondary">Contact Me</a>
+
+            <a href="assets/cv.pdf" class="btn secondary" target="_blank" rel="noopener noreferrer">
+                View My CV
+            </a>
+
+            <a href="https://uoem.ribara.co/employability/wangila_d_walubengo_21755_019fbcfc"
+               class="btn ribara-btn"
+               target="_blank"
+               rel="noopener noreferrer">
+                Ribara Profile ↗
+            </a>
+        </div>
+
+        <!-- CONTACT QR CODE -->
+
+        <div class="hero-contact">
+
+            <div class="qr-code">
+                <div id="contactQR"></div>
+            </div>
+
+            <div class="qr-info">
+                <h4>Scan to Reach Me</h4>
+
+                <p>Scan to save my contact details.</p>
+
+               
+                </a>
+            </div>
+
+        </div>
     </div>
-  </div>
 
-  <div class="profile">
-    <!-- Replace this image with your professional photograph -->
-    <img src="assets\profile-photo.jpeg" alt="Walubengo Wangila">
-    <h3>Walubengo Wangila D.</h3>
-    <p>SOFTWARE ENGINEER</p>
-  </div>
+    <div class="profile">
+        <img src="assets/profile-photo.jpeg" alt="Walubengo Wangila">
+        <h3>Walubengo Wangila D.</h3>
+        <p>SOFTWARE ENGINEER</p>
+    </div>
 
 </section>
 
 <!-- ABOUT -->
+
 <section class="container" id="about">
 
-  <div class="section-title">
-    <small>01 / ABOUT ME</small>
-    <h2>Who I Am</h2>
-  </div>
-
-  <div class="about-grid">
-
-    <div class="about-photo">
-      <img src="assets/profile-photo2.jpeg" alt="Walubengo Wangila profile">
+    <div class="section-title">
+        <small>01 / ABOUT ME</small>
+        <h2>Who I Am</h2>
     </div>
 
-    <div class="about-text">
-      <p>
-        I am an IT professional with a strong interest in software
-        engineering, web development and information systems.
-      </p>
+    <div class="about-grid">
 
-      <p>
-        I have a foundation in Python, Java, JavaScript, database
-        management, networking and IT support. I enjoy developing
-        solutions that improve how people and businesses work.
-      </p>
+        <div class="about-photo">
+            <img src="assets/profile-photo2.jpeg" alt="Walubengo Wangila profile">
+        </div>
 
-      <p>
-        I am also interested in ERP systems, blockchain technology,
-        cloud computing and artificial intelligence. I believe in
-        continuous learning and using technology to solve practical
-        challenges.
-      </p>
+        <div class="about-text">
 
-      <div class="facts">
-        <div><strong>NOTE</strong><small>Open to opportunities</small></div>
-        <div><strong>IT</strong><small>Professional field</small></div>
-        <div><strong>Kenya</strong><small>Location</small></div>
-      </div>
+            <p>
+                I am an IT professional with a strong interest in software
+                engineering, web development and information systems.
+            </p>
+
+            <p>
+                I have a foundation in Python, Java, JavaScript, database
+                management, networking and IT support. I enjoy developing
+                solutions that improve how people and businesses work.
+            </p>
+
+            <p>
+                I am also interested in ERP systems, blockchain technology,
+                cloud computing and artificial intelligence. I believe in
+                continuous learning and using technology to solve practical
+                challenges.
+            </p>
+
+            <div class="facts">
+                <div>
+                    <strong>NOTE</strong>
+                    <small>Open to opportunities</small>
+                </div>
+
+                <div>
+                    <strong>IT</strong>
+                    <small>Professional field</small>
+                </div>
+
+                <div>
+                    <strong>Kenya</strong>
+                    <small>Location</small>
+                </div>
+            </div>
+
+        </div>
+
     </div>
-
-  </div>
 </section>
 
 <!-- SKILLS -->
+
 <section class="container" id="skills">
 
-  <div class="section-title">
-    <small>02 / MY TOOLKIT</small>
-    <h2>Technical Skills</h2>
-    <p>Technologies and areas I work with and continue to develop.</p>
-  </div>
+    <div class="section-title">
+        <small>02 / MY TOOLKIT</small>
+        <h2>Technical Skills</h2>
+        <p>Technologies and areas I work with and continue to develop.</p>
+    </div>
 
-  <div class="skills-grid">
+    <div class="skills-grid">
 
-    <article class="skill">
-      <h3>Programming</h3>
-      <p>Application development and programming logic.</p>
-      <div class="tags"><span>Python</span><span>Java</span><span>JavaScript</span></div>
-    </article>
+        <article class="skill">
+            <h3>Programming</h3>
+            <p>Application development and programming logic.</p>
+            <div class="tags">
+                <span>Python</span>
+                <span>Java</span>
+                <span>JavaScript</span>
+            </div>
+        </article>
 
-    <article class="skill">
-      <h3>Web Development</h3>
-      <p>Creating responsive and user-friendly websites.</p>
-      <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
-    </article>
+        <article class="skill">
+            <h3>Web Development</h3>
+            <p>Creating responsive and user-friendly websites.</p>
+            <div class="tags">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+            </div>
+        </article>
 
-    <article class="skill">
-      <h3>Database Management</h3>
-      <p>Database design, management and data organization.</p>
-      <div class="tags"><span>PostgreSQL</span><span>MySQL</span></div>
-    </article>
+        <article class="skill">
+            <h3>Database Management</h3>
+            <p>Database design, management and data organization.</p>
+            <div class="tags">
+                <span>PostgreSQL</span>
+                <span>MySQL</span>
+            </div>
+        </article>
 
-    <article class="skill">
-      <h3>IT Support & Networking</h3>
-      <p>Computer maintenance, troubleshooting and networking.</p>
-      <div class="tags"><span>Networking</span><span>IT Support</span></div>
-    </article>
+        <article class="skill">
+            <h3>IT Support & Networking</h3>
+            <p>Computer maintenance, troubleshooting and networking.</p>
+            <div class="tags">
+                <span>Networking</span>
+                <span>IT Support</span>
+            </div>
+        </article>
 
-    <article class="skill">
-      <h3>Business Systems</h3>
-      <p>Developing applications for business processes.</p>
-      <div class="tags"><span>ERP</span><span>Flask</span><span>Management systems</span></div>
-    </article>
+        <article class="skill">
+            <h3>Business Systems</h3>
+            <p>Developing applications for business processes.</p>
+            <div class="tags">
+                <span>ERP</span>
+                <span>Flask</span>
+                <span>Management systems</span>
+            </div>
+        </article>
 
-    <article class="skill">
-      <h3>Emerging Technologies</h3>
-      <p>Exploring new technologies and their applications.</p>
-      <div class="tags"><span>Blockchain</span><span>Cloud</span><span>AI</span></div>
-    </article>
+        <article class="skill">
+            <h3>Emerging Technologies</h3>
+            <p>Exploring new technologies and their applications.</p>
+            <div class="tags">
+                <span>Blockchain</span>
+                <span>Cloud</span>
+                <span>AI</span>
+            </div>
+        </article>
 
-  </div>
+    </div>
 </section>
 
 <!-- PROJECTS -->
+
 <section class="container" id="projects">
 
-  <div class="section-title">
-    <small>03 / MY WORK</small>
-    <h2>Featured Projects</h2>
-    <p>Some of the systems and applications I have worked on.</p>
-  </div>
+    <div class="section-title">
+        <small>03 / MY WORK</small>
+        <h2>Featured Projects</h2>
+        <p>Some of the systems and applications I have worked on.</p>
+    </div>
 
-  <div class="projects-grid">
+    <div class="projects-grid">
 
-    <article class="project">
-      <div class="project-image">KRMS</div>
-      <div class="project-content">
-        <h3>Rental Management System</h3>
-        <p>
-          A rental management platform designed to help landlords
-          manage tenants, rooms, rent payments and financial reports.
-        </p>
-        <div class="tags"><span>Python</span><span>Flask</span><span>PostgreSQL</span><span>JavaScript</span></div>
+        <article class="project">
+            <div class="project-image">KRMS</div>
 
-        <details>
-          <summary>View project details</summary>
-          <p>
-            The system provides a centralized platform for rental
-            operations, including tenant registration, room management,
-            payment recording, rent balances and reporting.
-          </p>
-          <ul>
-            <li>Tenant and room management.</li>
-            <li>Rent payment tracking.</li>
-            <li>Financial reporting.</li>
-            <li>SMS notification support.</li>
-          </ul>
-        </details>
-      </div>
-    </article>
+            <div class="project-content">
+                <h3>Rental Management System</h3>
 
-    <article class="project">
-      <div class="project-image">BLOCKCHAIN</div>
-      <div class="project-content">
-        <h3>Blockchain-Based Antiques Verification System</h3>
-        <p>
-          A system concept for verifying antiques and recording
-          their ownership history using blockchain technology.
-        </p>
-        <div class="tags"><span>Blockchain</span><span>Smart Contracts</span><span>QR Codes</span></div>
+                <p>
+                    A rental management platform designed to help landlords
+                    manage tenants, rooms, rent payments and financial reports.
+                </p>
 
-        <details>
-          <summary>View project details</summary>
-          <p>
-            The proposed system records antique information and
-            generates verifiable digital records. It explores the
-            use of blockchain to improve ownership traceability.
-          </p>
-          <ul>
-            <li>Antique registration.</li>
-            <li>Digital ownership records.</li>
-            <li>QR-based verification.</li>
-            <li>Ownership transfer records.</li>
-          </ul>
-        </details>
-      </div>
-    </article>
+                <div class="tags">
+                    <span>Python</span>
+                    <span>Flask</span>
+                    <span>PostgreSQL</span>
+                    <span>JavaScript</span>
+                </div>
 
-    <article class="project">
-      <div class="project-image">E-VOTE</div>
-      <div class="project-content">
-        <h3>Blockchain-Based E-Voting System</h3>
-        <p>
-          A digital voting project exploring transparent and
-          traceable electronic election processes.
-        </p>
-        <div class="tags"><span>Blockchain</span><span>JavaScript</span><span>Database</span></div>
+                <details>
+                    <summary>View project details</summary>
 
-        <details>
-          <summary>View project details</summary>
-          <p>
-            The project explores how blockchain-based records
-            can support vote integrity and transparent election
-            record management.
-          </p>
-          <ul>
-            <li>Digital voting interface.</li>
-            <li>Vote recording.</li>
-            <li>Election result management.</li>
-          </ul>
-        </details>
-      </div>
-    </article>
+                    <p>
+                        The system provides a centralized platform for rental
+                        operations, including tenant registration, room management,
+                        payment recording, rent balances and reporting.
+                    </p>
 
-    <article class="project">
-      <div class="project-image">ORDER SYSTEM</div>
-      <div class="project-content">
-        <h3>Modern Ordering System</h3>
-        <p>
-          A digital ordering solution with order tracking
-          and an M-Pesa payment user interface.
-        </p>
-        <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>M-Pesa UI</span></div>
+                    <ul>
+                        <li>Tenant and room management.</li>
+                        <li>Rent payment tracking.</li>
+                        <li>Financial reporting.</li>
+                        <li>SMS notification support.</li>
+                    </ul>
+                </details>
+            </div>
+        </article>
 
-        <details>
-          <summary>View project details</summary>
-          <p>
-            The project focuses on simplifying digital ordering
-            through a user-friendly interface and payment flow
-            concept.
-          </p>
-          <ul>
-            <li>Digital order placement.</li>
-            <li>Order tracking interface.</li>
-            <li>M-Pesa payment UI integration concept.</li>
-          </ul>
-        </details>
-      </div>
-    </article>
+        <article class="project">
+            <div class="project-image">BLOCKCHAIN</div>
 
-  </div>
+            <div class="project-content">
+                <h3>Blockchain-Based Antiques Verification System</h3>
+
+                <p>
+                    A system concept for verifying antiques and recording
+                    their ownership history using blockchain technology.
+                </p>
+
+                <div class="tags">
+                    <span>Blockchain</span>
+                    <span>Smart Contracts</span>
+                    <span>QR Codes</span>
+                </div>
+
+                <details>
+                    <summary>View project details</summary>
+
+                    <p>
+                        The proposed system records antique information and
+                        generates verifiable digital records. It explores the
+                        use of blockchain to improve ownership traceability.
+                    </p>
+
+                    <ul>
+                        <li>Antique registration.</li>
+                        <li>Digital ownership records.</li>
+                        <li>QR-based verification.</li>
+                        <li>Ownership transfer records.</li>
+                    </ul>
+                </details>
+            </div>
+        </article>
+
+        <article class="project">
+            <div class="project-image">E-VOTE</div>
+
+            <div class="project-content">
+                <h3>Blockchain-Based E-Voting System</h3>
+
+                <p>
+                    A digital voting project exploring transparent and
+                    traceable electronic election processes.
+                </p>
+
+                <div class="tags">
+                    <span>Blockchain</span>
+                    <span>JavaScript</span>
+                    <span>Database</span>
+                </div>
+
+                <details>
+                    <summary>View project details</summary>
+
+                    <p>
+                        The project explores how blockchain-based records
+                        can support vote integrity and transparent election
+                        record management.
+                    </p>
+
+                    <ul>
+                        <li>Digital voting interface.</li>
+                        <li>Vote recording.</li>
+                        <li>Election result management.</li>
+                    </ul>
+                </details>
+            </div>
+        </article>
+
+        <article class="project">
+            <div class="project-image">ORDER SYSTEM</div>
+
+            <div class="project-content">
+                <h3>Modern Ordering System</h3>
+
+                <p>
+                    A digital ordering solution with order tracking
+                    and an M-Pesa payment user interface.
+                </p>
+
+                <div class="tags">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                    <span>M-Pesa UI</span>
+                </div>
+
+                <details>
+                    <summary>View project details</summary>
+
+                    <p>
+                        The project focuses on simplifying digital ordering
+                        through a user-friendly interface and payment flow
+                        concept.
+                    </p>
+
+                    <ul>
+                        <li>Digital order placement.</li>
+                        <li>Order tracking interface.</li>
+                        <li>M-Pesa payment UI integration concept.</li>
+                    </ul>
+                </details>
+            </div>
+        </article>
+
+    </div>
 </section>
 
 <!-- CV AND CERTIFICATES -->
+
 <section class="container" id="documents">
 
-  <div class="section-title">
-    <small>04 / PROFESSIONAL DOCUMENTS</small>
-    <h2>CV & Certificates</h2>
-    <p>
-      Employers and recruiters can view or download my
-      professional documents.
-    </p>
-  </div>
+    <div class="section-title">
+        <small>04 / PROFESSIONAL DOCUMENTS</small>
+        <h2>CV & Certificates</h2>
 
-  <div class="documents-grid">
+        <p>
+            Employers and recruiters can view or download my
+            professional documents.
+        </p>
+    </div>
 
-    <article class="document">
-      <h3>My Curriculum Vitae</h3>
-      <p>
-        View my professional profile, education, technical skills,
-        projects and experience.
-      </p>
+    <div class="documents-grid">
 
-      <div class="buttons">
-        <a href="assets/cv.pdf" target="_blank" class="btn primary">View CV ↗</a>
-        <a href="assets/cv.pdf" download class="btn secondary">Download PDF ↓</a>
-      </div>
-    </article>
+        <article class="document">
+            <h3>My Curriculum Vitae</h3>
 
-    <article class="document">
-      <h3>Professional Certificates</h3>
-      <p>My professional training and certifications.</p>
+            <p>
+                View my professional profile, education, technical skills,
+                projects and experience.
+            </p>
 
-      <!-- ADD YOUR CERTIFICATES BELOW -->
+            <div class="buttons">
+                <a href="assets/cv.pdf" target="_blank"
+                   rel="noopener noreferrer" class="btn primary">
+                    View CV ↗
+                </a>
 
-      <div class="certificate">
-        <strong>IBM AI Certificate</strong>
-        <small>IBM AI SkillsBuild</small>
-        <a href="assets/certificates/AILiteracy_Badge20260918-22-eyw4fz.pdf" target="_blank">View certificate ↗</a>
-        <a href="assets/certificates/AILiteracy_Badge20260918-22-eyw4fz.pdf" download>Download ↓</a>
-      </div>
+                <a href="assets/cv.pdf" download class="btn secondary">
+                    Download PDF ↓
+                </a>
+            </div>
+        </article>
 
-      <div class="certificate">
-        <strong>AWS Certificate</strong>
-        <small>Amazon Web Services</small>
-        <a href="assets/certificates/ML and AI Certificate.pdf" target="_blank">View certificate ↗</a>
-        <a href="assets/certificates/ML and AI Certificate.pdf" download>Download ↓</a>
-      </div>
+        <article class="document">
+            <h3>Professional Certificates</h3>
 
-      <div class="certificate">
-        <strong>Networking Certificate</strong>
-        <small>Networking Academy</small>
-        <a href="assets/certificates/Network Security certificate.pdf" target="_blank">View certificate ↗</a>
-        <a href="assets/certificates/Network Security certificate.pdf" download>Download ↓</a>
-      </div>
+            <p>My professional training and certifications.</p>
 
-      <div class="certificate">
-        <strong>ERP Training Certificate</strong>
-        <small>ERP Systems</small>
-        <a href="assets/certificates/EnterpriseDesignThinkingPractitioner_Badge20260911-20-srnu1o.pdf" target="_blank">View certificate ↗</a>
-        <a href="assets/certificates/EnterpriseDesignThinkingPractitioner_Badge20260911-20-srnu1o.pdf" download>Download ↓</a>
-      </div>
+            <div class="certificate">
+                <strong>IBM AI Certificate</strong>
+                <small>IBM AI SkillsBuild</small>
 
-    </article>
+                <a href="assets/certificates/AILiteracy_Badge20260918-22-eyw4fz.pdf"
+                   target="_blank" rel="noopener noreferrer">
+                    View certificate ↗
+                </a>
 
-  </div>
+                <a href="assets/certificates/AILiteracy_Badge20260918-22-eyw4fz.pdf"
+                   download>
+                    Download ↓
+                </a>
+            </div>
+
+            <div class="certificate">
+                <strong>AWS Certificate</strong>
+                <small>Amazon Web Services</small>
+
+                <a href="assets/certificates/ML and AI Certificate.pdf"
+                   target="_blank" rel="noopener noreferrer">
+                    View certificate ↗
+                </a>
+
+                <a href="assets/certificates/ML and AI Certificate.pdf"
+                   download>
+                    Download ↓
+                </a>
+            </div>
+
+            <div class="certificate">
+                <strong>Networking Certificate</strong>
+                <small>Networking Academy</small>
+
+                <a href="assets/certificates/Network Security certificate.pdf"
+                   target="_blank" rel="noopener noreferrer">
+                    View certificate ↗
+                </a>
+
+                <a href="assets/certificates/Network Security certificate.pdf"
+                   download>
+                    Download ↓
+                </a>
+            </div>
+
+            <div class="certificate">
+                <strong>ERP Training Certificate</strong>
+                <small>ERP Systems</small>
+
+                <a href="assets/certificates/EnterpriseDesignThinkingPractitioner_Badge20260911-20-srnu1o.pdf"
+                   target="_blank" rel="noopener noreferrer">
+                    View certificate ↗
+                </a>
+
+                <a href="assets/certificates/EnterpriseDesignThinkingPractitioner_Badge20260911-20-srnu1o.pdf"
+                   download>
+                    Download ↓
+                </a>
+            </div>
+
+        </article>
+
+    </div>
 </section>
 
 <!-- SERVICES -->
+
 <section class="container" id="services">
 
-  <div class="section-title">
-    <small>05 / WHAT I CAN DO</small>
-    <h2>How I Can Contribute</h2>
-  </div>
-
-  <div class="services">
-
-    <div class="service">
-      <h3>Website Development</h3>
-      <p>Responsive websites and modern web applications.</p>
+    <div class="section-title">
+        <small>05 / WHAT I CAN DO</small>
+        <h2>How I Can Contribute</h2>
     </div>
 
-    <div class="service">
-      <h3>Software Development</h3>
-      <p>Practical applications that solve business problems.</p>
-    </div>
+    <div class="services">
 
-    <div class="service">
-      <h3>ERP & Business Systems</h3>
-      <p>Business process support and management systems.</p>
-    </div>
+        <div class="service">
+            <h3>Website Development</h3>
+            <p>Responsive websites and modern web applications.</p>
+        </div>
 
-    <div class="service">
-      <h3>IT Support</h3>
-      <p>Computer troubleshooting, software installation and networking.</p>
-    </div>
+        <div class="service">
+            <h3>Software Development</h3>
+            <p>Practical applications that solve business problems.</p>
+        </div>
 
-  </div>
+        <div class="service">
+            <h3>ERP & Business Systems</h3>
+            <p>Business process support and management systems.</p>
+        </div>
+
+        <div class="service">
+            <h3>IT Support</h3>
+            <p>Computer troubleshooting, software installation and networking.</p>
+        </div>
+
+    </div>
 </section>
 
 <!-- CONTACT -->
+
 <section class="container" id="contact">
 
-  <div class="contact-box">
+    <div class="contact-box">
 
-    <small style="color:var(--cyan);letter-spacing:2px">
-      06 / GET IN TOUCH
-    </small>
+        <small style="color:var(--cyan);letter-spacing:2px">
+            06 / GET IN TOUCH
+        </small>
 
-    <h2>Let's Work <span class="gradient">Together.</span></h2>
+        <h2>Let's Work <span class="gradient">Together.</span></h2>
 
-    <p>
-      Have an opportunity, project or collaboration in mind?
-      I would be glad to hear from you.
-    </p>
+        <p>
+            Have an opportunity, project or collaboration in mind?
+            I would be glad to hear from you.
+        </p>
 
-    <!--
-      CONTACT FORM SETUP:
-      Replace YOUR_EMAIL@example.com below with your actual email.
-      FormSubmit will send a verification email the first time.
-      You must activate the form using that email.
-    -->
+        <!-- CONTACT FORM -->
 
-    <form class="contact-form"
-      action="https://formsubmit.co/walubengo.tech@gmail.com"
-      method="POST">
+        <form class="contact-form"
+              action="https://formsubmit.co/walubengo.tech@gmail.com"
+              method="POST">
 
-      <input type="hidden" name="_subject" value="New Portfolio Enquiry">
-      <input type="hidden" name="_captcha" value="true">
+            <input type="hidden" name="_subject" value="New Portfolio Enquiry">
+            <input type="hidden" name="_captcha" value="true">
 
-      <label for="name">Your Name</label>
-      <input id="name" type="text" name="name"
-        placeholder="Enter your name" required>
+            <label for="name">Your Name</label>
+            <input id="name" type="text" name="name"
+                   placeholder="Enter your name" required>
 
-      <label for="email">Your Email</label>
-      <input id="email" type="email" name="email"
-        placeholder="Enter your email" required>
+            <label for="email">Your Email</label>
+            <input id="email" type="email" name="email"
+                   placeholder="Enter your email" required>
 
-      <label for="subject">Subject</label>
-      <input id="subject" type="text" name="_subject"
-        placeholder="What is your enquiry about?" required>
+            <label for="subject">Subject</label>
+            <input id="subject" type="text" name="subject"
+                   placeholder="What is your enquiry about?" required>
 
-      <label for="message">Your Message</label>
-      <textarea id="message" name="message"
-        placeholder="Write your message here..." required></textarea>
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message"
+                      placeholder="Write your message here..." required></textarea>
 
-      <button class="btn primary" type="submit">
-        Send Message ↗
-      </button>
+            <button class="btn primary" type="submit">
+                Send Message ↗
+            </button>
 
-    </form>
+        </form>
 
-    <div class="contact-links">
-      <!-- Replace these links with your actual accounts -->
-      <a href="mailto:walubengo.tech@gmail.com">Email</a>
-      <a href="https://www.linkedin.com/in/wangila-walubengo/" target="_blank">LinkedIn</a>
-      <a href="https://github.com/universaltech-co/" target="_blank">GitHub</a>
+        <!-- CONTACT LINKS -->
+
+        <div class="contact-links">
+
+            <a href="mailto:walubengo.tech@gmail.com">Email</a>
+
+            <a href="tel:+254748091915">Call</a>
+
+            <a href="sms:+254748091915">SMS</a>
+
+            <a href="https://wa.me/254748091915"
+               target="_blank" rel="noopener noreferrer">
+                WhatsApp
+            </a>
+
+            <a href="https://www.linkedin.com/in/wangila-walubengo/"
+               target="_blank" rel="noopener noreferrer">
+                LinkedIn
+            </a>
+
+            <a href="https://github.com/universaltech-co/"
+               target="_blank" rel="noopener noreferrer">
+                GitHub
+            </a>
+
+            <a href="https://uoem.ribara.co/employability/wangila_d_walubengo_21755_019fbcfc"
+               target="_blank" rel="noopener noreferrer">
+                Ribara Profile ↗
+            </a>
+
+        </div>
+
     </div>
-
-  </div>
 </section>
 
 </main>
 
 <footer>
-  <p>© <span id="year"></span> Walubengo Wangila D. All Rights Reserved.</p>
-  <p>Designed and developed with purpose.</p>
+    <p>© <span id="year"></span> Walubengo Wangila D. All Rights Reserved.</p>
+    <p>Designed and developed with purpose.</p>
 </footer>
 
+<!-- QR CODE LIBRARY -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
 <script>
-  // MOBILE NAVIGATION
-  const menuBtn = document.getElementById("menuBtn");
-  const navigation = document.getElementById("navigation");
 
-  menuBtn.addEventListener("click", () => {
+// MOBILE NAVIGATION
+
+const menuBtn = document.getElementById("menuBtn");
+const navigation = document.getElementById("navigation");
+
+menuBtn.addEventListener("click", () => {
     navigation.classList.toggle("open");
-  });
+});
 
-  navigation.querySelectorAll("a").forEach(link => {
+navigation.querySelectorAll("a").forEach(link => {
     link.addEventListener("click", () => {
-      navigation.classList.remove("open");
+        navigation.classList.remove("open");
     });
-  });
+});
 
-  // AUTOMATIC COPYRIGHT YEAR
-  document.getElementById("year").textContent =
+// AUTOMATIC COPYRIGHT YEAR
+
+document.getElementById("year").textContent =
     new Date().getFullYear();
 
-  // CLOSE PROJECT DETAILS WHEN ANOTHER IS OPENED
-  const projectDetails = document.querySelectorAll(".project details");
+// CLOSE PROJECT DETAILS WHEN ANOTHER IS OPENED
 
-  projectDetails.forEach(detail => {
+const projectDetails = document.querySelectorAll(".project details");
+
+projectDetails.forEach(detail => {
     detail.addEventListener("toggle", () => {
-      if (detail.open) {
-        projectDetails.forEach(other => {
-          if (other !== detail) other.open = false;
-        });
-      }
+        if (detail.open) {
+            projectDetails.forEach(other => {
+                if (other !== detail) other.open = false;
+            });
+        }
     });
-  });
+});
+
+// GENERATE CONTACT QR CODE
+
+const qrContainer = document.getElementById("contactQR");
+
+if (qrContainer && typeof QRCode !== "undefined") {
+
+    const contactCard = [
+        "BEGIN:VCARD",
+        "VERSION:3.0",
+        "N:Wangila;Walubengo;D;;",
+        "FN:Walubengo Wangila D.",
+        "TEL;TYPE=CELL:+254748091915",
+        "EMAIL:walubengo.tech@gmail.com",
+        "URL:https://uoem.ribara.co/employability/wangila_d_walubengo_21755_019fbcfc",
+        "END:VCARD"
+    ].join("\r\n");
+
+    new QRCode(qrContainer, {
+        text: contactCard,
+        width: 105,
+        height: 105,
+        colorDark: "#090c19",
+        colorLight: "#ffffff",
+        correctLevel: QRCode.CorrectLevel.H
+    });
+
+} else if (qrContainer) {
+    qrContainer.textContent = "QR library unavailable";
+}
+
 </script>
 
 </body>
