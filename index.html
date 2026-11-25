@@ -1332,33 +1332,38 @@ projectDetails.forEach(detail => {
 });
 
 // GENERATE CONTACT QR CODE
+// GENERATE SCANNABLE CONTACT QR CODE
 
 const qrContainer = document.getElementById("contactQR");
 
-if (qrContainer && typeof QRCode !== "undefined") {
+if (qrContainer) {
 
-    const contactCard = [
-        "BEGIN:VCARD",
-        "VERSION:3.0",
-        "N:Wangila;Walubengo;D;;",
-        "FN:Walubengo Wangila D.",
-        "TEL;TYPE=CELL:+254748091915",
-        "EMAIL:walubengo.tech@gmail.com",
-        "URL:https://uoem.ribara.co/employability/wangila_d_walubengo_21755_019fbcfc",
-        "END:VCARD"
-    ].join("\r\n");
+    qrContainer.innerHTML = "";
 
-    new QRCode(qrContainer, {
-        text: contactCard,
-        width: 105,
-        height: 105,
-        colorDark: "#090c19",
-        colorLight: "#ffffff",
-        correctLevel: QRCode.CorrectLevel.H
-    });
+    if (typeof QRCode !== "undefined") {
 
-} else if (qrContainer) {
-    qrContainer.textContent = "QR library unavailable";
+        const contactCard = [
+            "BEGIN:VCARD",
+            "VERSION:3.0",
+            "FN:Walubengo Wangila D.",
+            "TEL;TYPE=CELL:+254748091915",
+            "EMAIL:walubengo.tech@gmail.com",
+            "URL:https://uoem.ribara.co/employability/wangila_d_walubengo_21755_019fbcfc",
+            "END:VCARD"
+        ].join("\r\n");
+
+        new QRCode(qrContainer, {
+            text: contactCard,
+            width: 200,
+            height: 200,
+            colorDark: "#090c19",
+            colorLight: "#ffffff",
+            correctLevel: QRCode.CorrectLevel.M
+        });
+
+    } else {
+        qrContainer.textContent = "QR code could not load.";
+    }
 }
 
 </script>
