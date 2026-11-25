@@ -226,55 +226,6 @@ nav a:hover {
     margin-top: 4px;
 }
 
-/* HERO CONTACT QR */
-
-.hero-contact {
-    display: flex;
-    align-items: center;
-    gap: 18px;
-    margin-top: 30px;
-    padding: 15px;
-    max-width: 410px;
-    background: var(--panel);
-    border: 1px solid var(--line);
-    border-radius: 10px;
-}
-
-.qr-code {
-    background: white;
-    padding: 8px;
-    border-radius: 5px;
-    flex-shrink: 0;
-}
-
-.qr-code img {
-    width: 105px;
-    height: 105px;
-    display: block;
-}
-
-.qr-info h4 {
-    font: 600 15px 'Space Grotesk';
-    margin-bottom: 5px;
-}
-
-.qr-info p {
-    font-size: 11px;
-    color: var(--muted);
-    margin-bottom: 8px;
-}
-
-.qr-info a {
-    display: inline-block;
-    color: var(--cyan);
-    font-size: 12px;
-    margin: 3px 9px 3px 0;
-}
-
-.qr-info a:hover {
-    text-decoration: underline;
-}
-
 /* GENERAL SECTIONS */
 
 section {
@@ -669,16 +620,6 @@ footer {
         padding: 30px 17px;
     }
 
-    .hero-contact {
-        max-width: 100%;
-        justify-content: flex-start;
-    }
-
-    .qr-code img {
-        width: 90px;
-        height: 90px;
-    }
-
     .contact-links {
         gap: 15px;
     }
@@ -742,25 +683,6 @@ footer {
                rel="noopener noreferrer">
                 Ribara Profile ↗
             </a>
-        </div>
-
-        <!-- CONTACT QR CODE -->
-
-        <div class="hero-contact">
-
-            <div class="qr-code">
-                <div id="contactQR"></div>
-            </div>
-
-            <div class="qr-info">
-                <h4>Scan to Reach Me</h4>
-
-                <p>Scan to save my contact details.</p>
-
-               
-                </a>
-            </div>
-
         </div>
     </div>
 
@@ -1291,10 +1213,6 @@ footer {
     <p>Designed and developed with purpose.</p>
 </footer>
 
-<!-- QR CODE LIBRARY -->
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-
 <script>
 
 // MOBILE NAVIGATION
@@ -1330,41 +1248,6 @@ projectDetails.forEach(detail => {
         }
     });
 });
-
-// GENERATE CONTACT QR CODE
-// GENERATE SCANNABLE CONTACT QR CODE
-
-const qrContainer = document.getElementById("contactQR");
-
-if (qrContainer) {
-
-    qrContainer.innerHTML = "";
-
-    if (typeof QRCode !== "undefined") {
-
-        const contactCard = [
-            "BEGIN:VCARD",
-            "VERSION:3.0",
-            "FN:Walubengo Wangila D.",
-            "TEL;TYPE=CELL:+254748091915",
-            "EMAIL:walubengo.tech@gmail.com",
-            "URL:https://uoem.ribara.co/employability/wangila_d_walubengo_21755_019fbcfc",
-            "END:VCARD"
-        ].join("\r\n");
-
-        new QRCode(qrContainer, {
-            text: contactCard,
-            width: 200,
-            height: 200,
-            colorDark: "#090c19",
-            colorLight: "#ffffff",
-            correctLevel: QRCode.CorrectLevel.M
-        });
-
-    } else {
-        qrContainer.textContent = "QR code could not load.";
-    }
-}
 
 </script>
 
