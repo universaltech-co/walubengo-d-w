@@ -13,13 +13,16 @@
 
 <style>
 :root {
-    --bg: #090c19;
-    --panel: #141a30;
-    --text: #f4f5ff;
-    --muted: #a1a9c2;
-    --cyan: #70e5ef;
-    --purple: #a78bfa;
-    --line: rgba(255,255,255,.12);
+    --bg: #F7F2E9;
+    --panel: #FFFCF6;
+    --text: #49372D;
+    --muted: #75685F;
+    --brown: #6B4938;
+    --cream: #F7F2E9;
+    --baby-blue: #A9D6E5;
+    --line: rgba(91,65,49,.16);
+    --cyan: #A9D6E5;
+    --purple: #8FC5D8;
 }
 
 * {
@@ -30,6 +33,7 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 85px;
 }
 
 body {
@@ -55,9 +59,9 @@ header {
     position: sticky;
     top: 0;
     z-index: 100;
-    background: rgba(9,12,25,.94);
-    backdrop-filter: blur(15px);
-    border-bottom: 1px solid var(--line);
+    background: #6B4938;
+    border-bottom: 1px solid rgba(255,255,255,.15);
+    box-shadow: 0 4px 18px rgba(55,35,24,.12);
 }
 
 .navbar {
@@ -70,10 +74,11 @@ header {
 .logo {
     font: 700 21px 'Space Grotesk';
     letter-spacing: 2px;
+    color: #F7F2E9;
 }
 
 .logo span {
-    color: var(--cyan);
+    color: #A9D6E5;
 }
 
 nav {
@@ -84,26 +89,44 @@ nav {
 
 nav a {
     font-size: 13px;
-    color: var(--muted);
+    color: #F7F2E9;
     transition: .3s;
 }
 
 nav a:hover {
-    color: var(--cyan);
+    color: #A9D6E5;
 }
 
 .menu-btn {
     display: none;
     background: none;
     border: 0;
-    color: white;
+    color: #F7F2E9;
     font-size: 25px;
     cursor: pointer;
 }
 
-/* HERO */
+/* HERO SECTION */
 
 .hero {
+    display: block;
+    width: 100%;
+    max-width: none;
+    min-height: 660px;
+    padding: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(247,242,233,.97) 0%,
+            rgba(247,242,233,.91) 48%,
+            rgba(247,242,233,.63) 100%
+        ),
+        url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=2000&q=85")
+        center / cover no-repeat;
+}
+
+.hero-inner {
     min-height: 660px;
     display: grid;
     grid-template-columns: 1.1fr .9fr;
@@ -114,10 +137,11 @@ nav a:hover {
 
 .available {
     display: inline-block;
-    border: 1px solid var(--line);
+    background: rgba(255,252,246,.82);
+    border: 1px solid rgba(91,65,49,.22);
     padding: 7px 14px;
     border-radius: 30px;
-    color: #9ae6b4;
+    color: #527C65;
     font-size: 11px;
     letter-spacing: 1px;
     margin-bottom: 25px;
@@ -127,22 +151,23 @@ nav a:hover {
     font: 700 clamp(48px,7vw,83px)/1.05 'Space Grotesk';
     letter-spacing: -4px;
     margin-bottom: 15px;
+    color: #6B4938;
 }
 
 .gradient {
-    background: linear-gradient(100deg,var(--cyan),var(--purple),#f0abfc);
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
+    background: none;
+    color: #6B4938;
+    -webkit-text-fill-color: #6B4938;
 }
 
 .hero h2 {
     font: 500 19px 'Space Grotesk';
     margin-bottom: 20px;
+    color: #6B4938;
 }
 
 .hero p {
-    color: var(--muted);
+    color: #75685F;
     max-width: 560px;
     font-size: 15px;
 }
@@ -157,7 +182,7 @@ nav a:hover {
 .btn {
     display: inline-block;
     padding: 12px 20px;
-    border-radius: 6px;
+    border-radius: 5px;
     font-size: 13px;
     font-weight: 700;
     border: 1px solid var(--line);
@@ -169,25 +194,28 @@ nav a:hover {
     transform: translateY(-3px);
 }
 
-.primary {
-    color: #09111c;
-    background: linear-gradient(100deg,var(--cyan),#b8a6ff);
-    border: 0;
+.primary,
+.ribara-btn {
+    background: #A9D6E5;
+    color: #294653;
+    border: 1px solid #A9D6E5;
+}
+
+.primary:hover,
+.ribara-btn:hover {
+    background: #8FC5D8;
+    border-color: #8FC5D8;
+    color: #294653;
 }
 
 .secondary {
-    background: var(--panel);
+    background: #FFFCF6;
+    color: #6B4938;
+    border: 1px solid rgba(91,65,49,.25);
 }
 
-.ribara-btn {
-    background: var(--cyan);
-    color: #090c19;
-    border: 0;
-}
-
-.ribara-btn:hover {
-    background: var(--purple);
-    color: white;
+.secondary:hover {
+    background: #EFE5D7;
 }
 
 /* HERO PROFILE */
@@ -198,10 +226,10 @@ nav a:hover {
     margin: auto;
     text-align: center;
     padding: 17px;
-    background: linear-gradient(145deg,#202a4a,#13182d);
-    border: 1px solid var(--line);
+    background: #FFFCF6;
+    border: 1px solid rgba(91,65,49,.18);
     border-radius: 15px;
-    box-shadow: 0 25px 80px rgba(0,0,0,.4);
+    box-shadow: 0 25px 65px rgba(65,45,32,.18);
     transform: rotate(2deg);
 }
 
@@ -211,24 +239,25 @@ nav a:hover {
     object-fit: cover;
     border-radius: 10px;
     display: block;
-    background: #202944;
+    background: #E8DED0;
 }
 
 .profile h3 {
     font: 600 22px 'Space Grotesk';
     margin-top: 15px;
+    color: #6B4938;
 }
 
 .profile p {
     font-size: 11px;
-    color: var(--cyan);
+    color: #527F91;
     letter-spacing: 2px;
     margin-top: 4px;
 }
 
 /* GENERAL SECTIONS */
 
-section {
+section:not(.hero) {
     padding: 90px 0;
 }
 
@@ -237,7 +266,7 @@ section {
 }
 
 .section-title small {
-    color: var(--cyan);
+    color: #6B4938;
     letter-spacing: 2px;
     font-size: 11px;
 }
@@ -245,10 +274,11 @@ section {
 .section-title h2 {
     font: 600 clamp(32px,5vw,48px) 'Space Grotesk';
     margin-top: 10px;
+    color: #6B4938;
 }
 
 .section-title p {
-    color: var(--muted);
+    color: #75685F;
     max-width: 600px;
     margin-top: 12px;
     font-size: 14px;
@@ -272,7 +302,7 @@ section {
 }
 
 .about-text p {
-    color: var(--muted);
+    color: #75685F;
     font-size: 14px;
     margin-bottom: 15px;
 }
@@ -287,11 +317,11 @@ section {
 .facts strong {
     display: block;
     font: 600 23px 'Space Grotesk';
-    color: var(--cyan);
+    color: #6B4938;
 }
 
 .facts small {
-    color: var(--muted);
+    color: #75685F;
 }
 
 /* SKILLS */
@@ -303,25 +333,27 @@ section {
 }
 
 .skill {
-    background: var(--panel);
+    background: #FFFCF6;
     border: 1px solid var(--line);
     border-radius: 10px;
     padding: 25px;
     transition: .3s;
+    box-shadow: 0 8px 24px rgba(83,59,43,.05);
 }
 
 .skill:hover {
     transform: translateY(-5px);
-    border-color: var(--cyan);
+    border-color: #A9D6E5;
 }
 
 .skill h3 {
     font: 600 18px 'Space Grotesk';
     margin-bottom: 10px;
+    color: #6B4938;
 }
 
 .skill p {
-    color: var(--muted);
+    color: #75685F;
     font-size: 13px;
 }
 
@@ -335,9 +367,10 @@ section {
 .tags span {
     font-size: 10px;
     padding: 5px 10px;
-    border: 1px solid var(--line);
+    border: 1px solid rgba(91,65,49,.13);
     border-radius: 20px;
-    color: var(--cyan);
+    color: #527F91;
+    background: #EDF5F7;
 }
 
 /* PROJECTS */
@@ -349,25 +382,26 @@ section {
 }
 
 .project {
-    background: var(--panel);
+    background: #FFFCF6;
     border: 1px solid var(--line);
     border-radius: 12px;
     overflow: hidden;
     transition: .3s;
+    box-shadow: 0 8px 24px rgba(83,59,43,.05);
 }
 
 .project:hover {
     transform: translateY(-5px);
-    border-color: var(--purple);
+    border-color: #A9D6E5;
 }
 
 .project-image {
     height: 180px;
     display: grid;
     place-items: center;
-    background: linear-gradient(135deg,#263c65,#292047);
+    background: linear-gradient(135deg,#E9DFD1,#D9EAF0);
     font: 700 35px 'Space Grotesk';
-    color: var(--cyan);
+    color: #6B4938;
 }
 
 .project-content {
@@ -377,10 +411,11 @@ section {
 .project-content h3 {
     font: 600 19px 'Space Grotesk';
     margin-bottom: 10px;
+    color: #6B4938;
 }
 
 .project-content p {
-    color: var(--muted);
+    color: #75685F;
     font-size: 13px;
 }
 
@@ -389,7 +424,7 @@ section {
 }
 
 .project summary {
-    color: var(--cyan);
+    color: #527F91;
     font-size: 12px;
     cursor: pointer;
     font-weight: 600;
@@ -401,7 +436,7 @@ section {
 
 .project details ul {
     margin: 10px 0 0 18px;
-    color: var(--muted);
+    color: #75685F;
     font-size: 12px;
 }
 
@@ -414,7 +449,7 @@ section {
 }
 
 .document {
-    background: var(--panel);
+    background: #FFFCF6;
     border: 1px solid var(--line);
     padding: 25px;
     border-radius: 12px;
@@ -423,11 +458,12 @@ section {
 .document h3 {
     font: 600 20px 'Space Grotesk';
     margin-bottom: 10px;
+    color: #6B4938;
 }
 
 .document p {
     font-size: 13px;
-    color: var(--muted);
+    color: #75685F;
     margin-bottom: 17px;
 }
 
@@ -443,13 +479,13 @@ section {
 
 .certificate small {
     display: block;
-    color: var(--muted);
+    color: #75685F;
     font-size: 11px;
     margin: 4px 0 10px;
 }
 
 .certificate a {
-    color: var(--cyan);
+    color: #527F91;
     font-size: 12px;
     margin-right: 15px;
 }
@@ -470,18 +506,19 @@ section {
 .service h3 {
     font: 600 17px 'Space Grotesk';
     margin-bottom: 7px;
+    color: #6B4938;
 }
 
 .service p {
     font-size: 13px;
-    color: var(--muted);
+    color: #75685F;
 }
 
 /* CONTACT */
 
 .contact-box {
-    background: linear-gradient(135deg,#202b4d,#19152f);
-    border: 1px solid var(--line);
+    background: #EFE7DA;
+    border: 1px solid rgba(91,65,49,.16);
     border-radius: 15px;
     padding: 45px;
     text-align: center;
@@ -489,10 +526,11 @@ section {
 
 .contact-box h2 {
     font: 600 clamp(30px,5vw,45px) 'Space Grotesk';
+    color: #6B4938;
 }
 
 .contact-box > p {
-    color: var(--muted);
+    color: #75685F;
     font-size: 14px;
     margin: 12px auto 25px;
     max-width: 550px;
@@ -507,18 +545,30 @@ section {
 .contact-form label {
     display: block;
     font-size: 12px;
+    color: #6B4938;
     margin: 14px 0 6px;
 }
 
 .contact-form input,
 .contact-form textarea {
     width: 100%;
-    background: #0d1225;
-    color: white;
-    border: 1px solid var(--line);
+    background: #FFFCF6;
+    color: #49372D;
+    border: 1px solid rgba(91,65,49,.22);
     border-radius: 6px;
     padding: 13px;
     font: 13px 'DM Sans';
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #9A8B7E;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: 2px solid rgba(169,214,229,.75);
+    border-color: #83B9CC;
 }
 
 .contact-form textarea {
@@ -540,7 +590,7 @@ section {
 }
 
 .contact-links a {
-    color: var(--cyan);
+    color: #527F91;
 }
 
 .contact-links a:hover {
@@ -553,7 +603,7 @@ footer {
     text-align: center;
     padding: 30px 10px;
     border-top: 1px solid var(--line);
-    color: var(--muted);
+    color: #75685F;
     font-size: 11px;
     margin-top: 70px;
 }
@@ -561,8 +611,9 @@ footer {
 /* RESPONSIVE */
 
 @media(max-width:800px) {
-    .hero {
+    .hero-inner {
         grid-template-columns: 1fr;
+        padding: 65px 0;
     }
 
     .profile {
@@ -598,12 +649,38 @@ footer {
         left: 0;
         width: 100%;
         padding: 20px;
-        background: #11172c;
+        background: #6B4938;
         flex-direction: column;
+        border-bottom: 1px solid rgba(255,255,255,.15);
+        box-shadow: 0 12px 25px rgba(65,45,32,.12);
     }
 
     nav.open {
         display: flex;
+    }
+
+    nav a {
+        color: #F7F2E9;
+    }
+
+    nav a:hover {
+        color: #A9D6E5;
+    }
+
+    .hero {
+        min-height: auto;
+        background:
+            linear-gradient(
+                rgba(247,242,233,.92),
+                rgba(247,242,233,.94)
+            ),
+            url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=85")
+            center / cover no-repeat;
+    }
+
+    .hero-inner {
+        min-height: auto;
+        padding: 60px 0;
     }
 
     .hero h1 {
@@ -650,48 +727,50 @@ footer {
 
 <!-- HERO SECTION -->
 
-<section class="container hero" id="home">
+<section class="hero" id="home">
+    <div class="container hero-inner">
 
-    <div>
-        <div class="available">● OPEN TO CAREER OPPORTUNITIES</div>
+        <div>
+            <div class="available">● OPEN TO CAREER OPPORTUNITIES</div>
 
-        <h1>
-            Walubengo<br>
-            <span class=>Wangila.</span>
-        </h1>
+            <h1>
+                Walubengo<br>
+                <span class="gradient">Wangila.</span>
+            </h1>
 
-        <h2>Software Engineer | IT Professional</h2>
+            <h2>Software Engineer | IT Professional</h2>
 
-        <p>
-            I build practical digital solutions that solve real-world problems.
-            My interests include software development, web technologies,
-            business management systems, networking and emerging technologies.
-        </p>
+            <p>
+                I build practical digital solutions that solve real-world problems.
+                My interests include software development, web technologies,
+                business management systems, networking and emerging technologies.
+            </p>
 
-        <div class="buttons">
-            <a href="#projects" class="btn primary">Explore My Work ↗</a>
+            <div class="buttons">
+                <a href="#projects" class="btn primary">Explore My Work ↗</a>
 
-            <a href="#contact" class="btn secondary">Contact Me</a>
+                <a href="#contact" class="btn secondary">Contact Me</a>
 
-            <a href="assets/cv.pdf" class="btn secondary" target="_blank" rel="noopener noreferrer">
-                View My CV
-            </a>
+                <a href="assets/cv.pdf" class="btn secondary" target="_blank" rel="noopener noreferrer">
+                    View My CV
+                </a>
 
-            <a href="https://uoem.ribara.co/employability/wangila_d_walubengo_21755_019fbcfc"
-               class="btn ribara-btn"
-               target="_blank"
-               rel="noopener noreferrer">
-                Ribara Profile ↗
-            </a>
+                <a href="https://uoem.ribara.co/employability/wangila_d_walubengo_21755_019fbcfc"
+                   class="btn ribara-btn"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Ribara Profile ↗
+                </a>
+            </div>
         </div>
-    </div>
 
-    <div class="profile">
-        <img src="assets/profile-photo.jpeg" alt="Walubengo Wangila">
-        <h3>Walubengo Wangila D.</h3>
-        <p>SOFTWARE ENGINEER</p>
-    </div>
+        <div class="profile">
+            <img src="assets/profile-photo.jpeg" alt="Walubengo Wangila">
+            <h3>Walubengo Wangila D.</h3>
+            <p>SOFTWARE ENGINEER</p>
+        </div>
 
+    </div>
 </section>
 
 <!-- ABOUT -->
@@ -1129,7 +1208,7 @@ footer {
 
     <div class="contact-box">
 
-        <small style="color:var(--cyan);letter-spacing:2px">
+        <small style="color:#6B4938;letter-spacing:2px">
             06 / GET IN TOUCH
         </small>
 
